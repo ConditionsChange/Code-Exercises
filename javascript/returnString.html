@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Code</title>
+</head>
+<body>
+<script>
+
+var reverseString = (string) => {
+	if (string.length == 1){
+		return string;
+	}
+	else{
+		return reverseString(string.slice(1,string.length)) + string[0];
+	}
+}
+
+console.log(reverseString("wahoo"))
+
+</script>
+</body>
+</html>

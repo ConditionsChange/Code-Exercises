@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Code</title>
+</head>
+<body>
+<script>
+
+// var factorial = function fac(n) { return n < 2 ? 1 : n * fac(n - 1); };
+
+// console.log(factorial(3));
+
+var bruteFactorial = (number) => {
+	if (number < 0 || !Number.isInteger(number)){
+		throw new Error("Paramater must be a positive integer")
+	}
+	else if (number == 0){
+		return 1
+	}
+	else{
+		var counter = number;
+		var accumulator = number;
+		while (counter > 1){
+			accumulator = accumulator * (counter - 1)
+			counter--
+		}
+		return accumulator
+	}
+	
+
+}
+
+console.log(bruteFactorial(1))
+
+
+
+const niceFactorial = (number) => {
+	if (number == 0){
+		return 1
+	}
+	else{
+		return number = number * niceFactorial (number-1)
+	}
+}
+
+
+console.log(niceFactorial(3))
+
+
+
+var counter = 10;
+while(counter > 0) {
+    console.log(counter--);
+}
+
+
+
+</script>
+</body>
+</html>

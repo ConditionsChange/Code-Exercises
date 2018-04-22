@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Code</title>
+</head>
+<body>
+<script>
+
+const pairs = [
+	{1:10},{2:20},{3:30}
+]
+
+const added = pairs.map((obj) => {
+	return Number(Object.keys(obj)[0]) + Number(obj[Object.keys(obj)[0]]);
+})
+
+console.log(added)
+
+
+</script>
+</body>
+</html>
