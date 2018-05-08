@@ -1,0 +1,3 @@
+Clearfix in depth: https://css-tricks.com/all-about-floats/
+Positioning: https://learn.shayhowe.com/html-css/positioning-content/
+Sticky footer: https://css-tricks.com/couple-takes-sticky-footer/
