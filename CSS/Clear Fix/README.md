@@ -1,0 +1,1 @@
+Clearfix in depth: https://css-tricks.com/all-about-floats/

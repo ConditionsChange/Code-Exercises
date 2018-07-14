@@ -1,0 +1,1 @@
+Selectors Cheatsheet: https://kolosek.com/css-selectors/

@@ -1,1 +1,0 @@
-https://kolosek.com/css-selectors/
