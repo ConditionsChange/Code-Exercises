@@ -1,0 +1,1 @@
+Link to good notes: https://github.com/trekhleb/javascript-algorithms/blob/master/README.md
