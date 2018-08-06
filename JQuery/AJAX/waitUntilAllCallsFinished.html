@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Multiple AJAX</title>
+</head>
+
+<body>
+  <h1>Open the console to see the asynchronous API calls</h1>
+  <h2>Open the console to see the asynchronous API calls</h2>
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript">
+    // Performing GET requests to the OMDB API and logging the responses to the console
+
+    const movieTitles = ["Romancing the Stone", "The Revenant", "Father and God Father", "Space Jam", "Boiler Plate", "Inception", "The Dark Knight"]
+
+    console.log("Here is the list of movies in order that we want to query from the database:")
+    movieTitles.forEach(function(movie){
+        console.log(movie)
+    })
+    console.log("\nWe will now asynchronously query the API:")
+    console.log("\n")
+
+    const movieApiUrls = ["http://www.omdbapi.com/?t=romancing+the+stone&y=&plot=short&r=json&apikey=40e9cece", "http://www.omdbapi.com/?t=the+revenant&y=&plot=short&r=json&apikey=40e9cece", "http://www.omdbapi.com/?t=god+father&y=&plot=short&r=json&apikey=40e9cece", "http://www.omdbapi.com/?t=space+jam&y=&plot=short&r=json&apikey=40e9cece", "http://www.omdbapi.com/?t=boiler+room&y=&plot=short&r=json&apikey=40e9cece", "http://www.omdbapi.com/?t=inception&y=&plot=short&r=json&apikey=40e9cece", "http://www.omdbapi.com/?t=the+dark+night&y=&plot=short&r=json&apikey=40e9cece"];
+
+    $.when(ajaxCall(movieApiUrls[0]), ajaxCall(movieApiUrls[1]), ajaxCall(movieApiUrls[2]), ajaxCall(movieApiUrls[3]), ajaxCall(movieApiUrls[4]), ajaxCall(movieApiUrls[5]), ajaxCall(movieApiUrls[6])).done(function (result1, result2, result3, result4, result5, result6, result7){
+        console.log(result1[0].Title)
+        console.log(result2[0].Title)
+        console.log(result3[0].Title)
+        console.log(result4[0].Title)
+        console.log(result5[0].Title)
+        console.log(result6[0].Title)
+        console.log(result7[0].Title)
+        console.log("We can finally print out the movie titles in the correct order.")       
+    });
+
+    function ajaxCall(requrl){
+         return $.ajax({
+                    url: requrl,
+                    method: "GET"
+                })       
+    }
+
+  </script>
+
+</body>
+
+</html>
